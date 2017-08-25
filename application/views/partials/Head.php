@@ -11,4 +11,6 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>css/style.css">
 <link rel="stylesheet" href="<?php echo base_url() ?>css/theme.css">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="http://vjs.zencdn.net/4.12/video.js"></script>
 <script src="<?php echo base_url() ?>js/style.js"></script>
+

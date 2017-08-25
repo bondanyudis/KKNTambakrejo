@@ -44,7 +44,7 @@
 <li><a  href="#"><i class="fa fa-camera"></i> GALERI</a>
 <ul class="sub-menu">
 <li><a href="<?php echo base_url('index.php/C_GaleriFoto/index') ?>">FOTO</a></li>
-<li><a href="#">VIDEO</a></li>
+<li><a href="<?php echo base_url('index.php/C_GaleriVideo/index') ?>">VIDEO</a></li>
 </ul>
 </li>
 </ul>

@@ -109,62 +109,67 @@
     </div>
     <div class="isi">
       <div class="col-sm-9 news">
-        <!-- <h2>PARIWISATA</h2> -->
-        <div class="col-md-6">
-          <div class="thumbnail">
-            <img src="<?php echo base_url() ?>images/tamban2.jpg" alt="...">
-            <div class="caption" style="text-align:center">
-              <h3>Bersih Desa Warga</h3>
-              <div style="margin-top: 15px">
-                <p style="text-align:left;border-bottom: 1px solid rgba(0,0,0,0.3);font-size: 15px">Admin, 24 Agustus 2017 11:40 AM</p>
-                <p style="font-size: 18px">Acara bersih desa yang dilakukan pada hari kamis yang mana diiringin oleh hujan</p>
-              </div>
-              <p><a href="#" class="btn btn-primary" role="button">Selengkapnya...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 announ">
-          <div class="thumbnail">
-            <img src="<?php echo base_url() ?>images/tamban3.jpg" alt="...">
-            <div class="caption" style="text-align:center">
-              <h3>Petik Laut di Sendang Biru</h3>
-              <div style="margin-top: 15px">
-                <p style="text-align:left;border-bottom: 1px solid rgba(0,0,0,0.3);font-size: 15px">Admin, 24 Agustus 2017 11:40 AM</p>
-                <p style="font-size: 18px">Acara bersih desa yang dilakukan pada hari kamis yang mana diiringin oleh hujan</p>
-              </div>
-              <p><a href="#" class="btn btn-primary" role="button">Selengkapnya...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="thumbnail">
-            <img src="<?php echo base_url() ?>images/sendiki2.jpg" alt="...">
-            <div class="caption" style="text-align:center">
-              <h3>Petik Laut di Sendang Biru</h3>
-              <div style="margin-top: 15px">
-                <p style="text-align:left;border-bottom: 1px solid rgba(0,0,0,0.3);font-size: 15px">Admin, 24 Agustus 2017 11:40 AM</p>
-                <p style="font-size: 18px">Acara bersih desa yang dilakukan pada hari kamis yang mana diiringin oleh hujan</p>
-              </div>
-              <p><a href="#" class="btn btn-primary" role="button">Selengkapnya...</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="thumbnail">
-            <img src="<?php echo base_url() ?>images/tamban.jpg" alt="...">
-            <div class="caption" style="text-align:center">
-              <h3>Petik Laut di Sendang Biru</h3>
-              <div style="margin-top: 15px">
-                <p style="text-align:left;border-bottom: 1px solid rgba(0,0,0,0.3);font-size: 15px">Admin, 24 Agustus 2017 11:40 AM</p>
-                <p style="font-size: 18px">Acara bersih desa yang dilakukan pada hari kamis yang mana diiringin oleh hujan</p>
-              </div>
-              <p><a href="#" class="btn btn-primary" role="button">Selengkapnya...</a>
-            </div>
-          </div>
+        <div id="columns">
+  <figure>
+  <img src="<?php echo base_url() ?>images/sendiki.jpg">
+  <figcaption>
+    <h4>Acara bersih Pantai Sendiki Dilaksanakan hari jumat</h4>
+    <p class="admin">Admin, 25 Agustus 2017 13:01</p>
+  Cinderella wearing European fashion of the mid-1860’s</figcaption>
+  <p><a href="#" class="btn btn-primary" role="button">Selengkapnya</a></p>
+  </figure>
+  
+  <figure>
+  <img src="<?php echo base_url() ?>images/sendiki2.jpg">
+  <figcaption>
+  <h4>Acara bersih Pantai Sendiki Dilaksanakan hari jumat</h4>
+  <p class="admin">Admin, 25 Agustus 2017 13:01</p>
+  Rapunzel, clothed in 1820’s period fashion</figcaption>
+  <p><a href="#" class="btn btn-primary" role="button">Selengkapnya</a></p>
+  </figure>
+  
+  <figure>
+  <img src="<?php echo base_url() ?>images/tamban.jpg">
+  <figcaption>
+  <h4>Acara bersih Pantai Sendiki Dilaksanakan hari jumat</h4>
+  <p class="admin">Admin, 25 Agustus 2017 13:01</p>
+  Belle, based on 1770’s French court fashion</figcaption>
+  <p><a href="#" class="btn btn-primary" role="button">Selengkapnya</a></p>
+  </figure>
+  
+  <figure>
+  <img src="<?php echo base_url() ?>images/sendiki3.jpg">
+  <figcaption>
+  <h4>Acara bersih Pantai Sendiki Dilaksanakan hari jumat</h4>
+  <p class="admin">Admin, 25 Agustus 2017 13:01</p>
+  Mulan, based on the Ming Dynasty period</figcaption>
+  <p><a href="#" class="btn btn-primary" role="button">Selengkapnya</a></p>
+  </figure>
+  
+   <figure>
+   <img src="<?php echo base_url() ?>images/tamban2.jpg">
+  <figcaption>
+  <h4>Acara bersih Pantai Sendiki Dilaksanakan hari jumat</h4>
+  <p class="admin">Admin, 25 Agustus 2017 13:01</p>
+  Sleeping Beauty, based on European fashions in 1485</figcaption>
+  <p><a href="#" class="btn btn-primary" role="button">Selengkapnya</a></p>
+  </figure>
+  
+   <figure>
+   <img src="<?php echo base_url() ?>images/sendiki.jpg">
+  <figcaption>
+  <h4>Acara bersih Pantai Sendiki Dilaksanakan hari jumat</h4>
+  <p class="admin">Admin, 25 Agustus 2017 13:01</p>
+  Pocahontas based on 17th century Powhatan costume</figcaption>
+  <p><a href="#" class="btn btn-primary" role="button">Selengkapnya</a></p>
+  </figure>
+  </div>
+        <!--  -->
+
         </div>
         
       </div>
-      <div class="sampingan col-sm-3">
+      <div class="sampingan col-sm-3" style="padding:0">
         <div class="list-group">
           <!-- <h3 style="color: rgba(0,0,0,0.5);text-align: center;margin-bottom: 5px">Berita</h3> -->
           <a href="#" class="list-group-item">
@@ -172,7 +177,8 @@
               <img class="media-object img-rounded img-responsive"  src="<?php echo base_url() ?>images/sendiki.jpg" alt="placehold.it/350x250">
             </div>
             <div class="col-md-6" style="padding:0px 4px;">
-              <p class="list-group-item-text"> Kegiatan bersih desa dilakukan oleh segenap warga desa...
+              <p style="font-size: 10px;margin:0">25/08/2017 13:10</p>
+              <p class="list-group-item-text" style="margin:0"> Kegiatan bersih desa dilakukan oleh segenap...
               </p>
             </div>
           </a>

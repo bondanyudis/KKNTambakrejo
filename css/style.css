@@ -343,7 +343,7 @@ h1.berita{
   color: rgba(0,0,0,0.6);
 }
 div.isi{
-  margin-left: 110px;
+  margin-left: 60px;
   margin-right: 130px;
   margin-top: 40px;
 }
@@ -369,12 +369,6 @@ h1.judulprofil{
   color: rgba(0,0,0,0.6)!important;
 }
 /**/
-div.caption{
-  box-sizing: border-box;
-  padding:0;
-  margin:0;
-}
-
 a.list-group-item {
     height:auto;
     min-height:120px;
@@ -558,3 +552,65 @@ a.list-group-item.active small {
 /*end footer*/
 
 
+/*kolom berita utama*/
+@font-face{font-family:'Calluna';
+ src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
+}
+#columns {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0px auto;
+}
+
+div#columns figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+  margin: 0 2px 15px;
+  padding: 15px;
+  padding-bottom: 10px;
+  transition: opacity .4s ease-in-out;
+  display: inline-block;
+  column-break-inside: avoid;
+}
+
+div#columns figure img {
+  width: 100%; height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+div#columns figure figcaption {
+  font-size: .9rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+div#columns small { 
+  font-size: 1rem;
+  float: right; 
+  text-transform: uppercase;
+  color: #aaa;
+} 
+
+div#columns small a { 
+  color: #666; 
+  text-decoration: none; 
+  transition: .4s color;
+}
+
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
+h4{
+  text-align: center;
+  margin-bottom: 15px;
+}
+p.admin{
+  color: lightblue;
+}
+/*akhir kolom*/
