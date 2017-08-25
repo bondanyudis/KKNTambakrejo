@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<title>Responsive Full Background Image</title>
+<title>Desa Tambakrejo</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="author" content="Six Revisions">
 <meta name="description" content="How to use the CSS background-size property to make an image fully span the entire viewport.">
