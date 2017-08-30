@@ -19,6 +19,35 @@ class C_admin extends CI_Controller{
 		$this->load->view('Admin\Adminindex');
 	}
 
+	function Foto(){
+		//$data['products'] = $this->m_database->view_data()->result();
+		//$this->load->view('v_admin',$data);
+		$this->load->view('partials\HeadAdmin');
+		$this->load->view('Admin\Foto');
+	}
+
+	function Video(){
+		//$data['products'] = $this->m_database->view_data()->result();
+		//$this->load->view('v_admin',$data);
+		$this->load->view('partials\HeadAdmin');
+		$this->load->view('Admin\Video');
+	}
+
+	function Homestay(){
+		//$data['products'] = $this->m_database->view_data()->result();
+		//$this->load->view('v_admin',$data);
+		$this->load->view('partials\HeadAdmin');
+		$this->load->view('Admin\Homestay');
+	}
+
+	function Profil(){
+		//$data['products'] = $this->m_database->view_data()->result();
+		//$this->load->view('v_admin',$data);
+		$this->load->view('partials\HeadAdmin');
+		$this->load->view('Admin\Profil');
+	}
+
+
 	/*function create(){
 		$this->load->view('v_createVaksin');
 	}
