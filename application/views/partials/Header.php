@@ -1,3 +1,4 @@
+
 <nav class="navbar" id="top">
   <div class="inner" id="inner">
     <div class="dropdownleft">
@@ -50,14 +51,15 @@
 </ul>
 </div>
 </nav>
+
 <header class="container">
-<div class="content">
-<h1>DESA WISATA TAMBAKREJO</h1>
-<p class="sub-title" style="font-size: 25px">Kecamatan Sumbermanjing Wetan, Kabupaten Malang</p>
-<p><a class="button" id="load-more-content" href="#top">Profil lengkap</a></p>
-<!-- Some content to demonstrate viewport scrolling behavior -->
-<div id="more-content">
-<p><br />Background image courtesy of <br /> <a href="http://unsplash.com/" target="_blank">Unsplash</a>.</p>
-</div>
-</div>
+  <div class="content">
+    <h1>DESA WISATA TAMBAKREJO</h1>
+      <p class="sub-title" style="font-size: 25px">Kecamatan Sumbermanjing Wetan, Kabupaten Malang</p>
+      <p><a class="button" id="load-more-content">Profil Singkat</a></p>
+      <!-- Some content to demonstrate viewport scrolling behavior -->
+    <div id="more-content">
+      <p><br />Profil desa Tambakrejo bla bla bla bla<br /> <a class="prof" href="http://unsplash.com/">Lihat Selengkapnya</a>.</p>
+    </div>
+  </div>
 </header>
