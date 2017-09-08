@@ -42,7 +42,7 @@
       <p><a class="button profilbutton" id="load-more-content" href="#top">Profil lengkap</a></p>
     </div>
     <div class="isi">
-      <div class="col-sm-9 news">
+      <div class="col-sm-12 news">
         <div id="columns">
           <?php foreach($event as $event){ ?>
           <figure>
@@ -61,57 +61,7 @@
       </div>
       
     </div>
-    <div class="sampingan col-sm-3" style="padding:0">
-      <div class="list-group">
-        <!-- <h3 style="color: rgba(0,0,0,0.5);text-align: center;margin-bottom: 5px">Berita</h3> -->
-        <a href="#" class="list-group-item">
-          <div class="col-md-6" style="padding:0;">
-            <img class="media-object img-rounded img-responsive"  src="<?php echo base_url() ?>images/sendiki.jpg" alt="placehold.it/350x250">
-          </div>
-          <div class="col-md-6" style="padding:0px 4px;">
-            <p style="font-size: 10px;margin:0">25/08/2017 13:10</p>
-            <p class="list-group-item-text" style="margin:0"> Kegiatan bersih desa dilakukan oleh segenap...
-            </p>
-          </div>
-        </a>
-        <a href="#" class="list-group-item">
-          <div class="col-md-6" style="padding:0;">
-            <img class="media-object img-rounded img-responsive"  src="<?php echo base_url() ?>images/sendiki.jpg" alt="placehold.it/350x250">
-          </div>
-          <div class="col-md-6" style="padding:0px 4px;">
-            <p class="list-group-item-text"> Kegiatan bersih desa dilakukan oleh segenap warga desa...
-            </p>
-          </div>
-        </a>
-        <a href="#" class="list-group-item">
-          <div class="col-md-6" style="padding:0;">
-            <img class="media-object img-rounded img-responsive"  src="<?php echo base_url() ?>/images/sendiki.jpg" alt="placehold.it/350x250">
-          </div>
-          <div class="col-md-6" style="padding:0px 4px;">
-            <p class="list-group-item-text"> Kegiatan bersih desa dilakukan oleh segenap warga desa...
-            </p>
-          </div>
-        </a>
-        <a href="#" class="list-group-item">
-          <div class="col-md-6" style="padding:0;">
-            <img class="media-object img-rounded img-responsive"  src="<?php echo base_url() ?>images/sendiki.jpg" alt="placehold.it/350x250">
-          </div>
-          <div class="col-md-6" style="padding:0px 4px;">
-            <p class="list-group-item-text"> Kegiatan bersih desa dilakukan oleh segenap warga desa...
-            </p>
-          </div>
-        </a>
-        <a href="#" class="list-group-item">
-          <div class="col-md-6" style="padding:0;">
-            <img class="media-object img-rounded img-responsive"  src="<?php echo base_url() ?>images/sendiki.jpg" alt="placehold.it/350x250">
-          </div>
-          <div class="col-md-6" style="padding:0px 4px;">
-            <p class="list-group-item-text"> Kegiatan bersih desa dilakukan oleh segenap warga desa...
-            </p>
-          </div>
-        </a>
-      </div>
-    </div>
+    
   </div>
   <span class="clearfix"></span>
   <?php include('partials/Footer.php') ?>

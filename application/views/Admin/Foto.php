@@ -14,17 +14,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
-=======
                 <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
                 <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-            </div>
-            <!-- /.navbar-header -->
             
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -98,8 +90,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-<<<<<<< HEAD
-<<<<<<< HEAD
                                 <?php foreach ($foto as $DataFoto) {?>
                                 <tr class="odd gradeX">
                                     <td><?php echo "$DataFoto->id"; ?></td>
@@ -114,9 +104,6 @@
                                     </td>
                                 </tr>
                                 <?php } ?>
-=======
-=======
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
                                     <tr class="odd gradeX">
                                         <td>Trident</td>
                                         <td>Internet Explorer 4.0</td>
@@ -127,10 +114,6 @@
                                         <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button>
                                         </td>
                                     </tr>
-<<<<<<< HEAD
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
                                 </tbody>
                             </table>
                             <!-- /.table-responsive -->

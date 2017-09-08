@@ -193,15 +193,15 @@ class C_admin extends CI_Controller{
 	function HapusVideo(){
 		redirect ("C_admin/Video");
 	}
-	function FormFoto(){
-		$this->load->view('partials\HeadAdmin');
-		$this->load->view('Admin\FormFoto');
-	}
+	// function FormFoto(){
+	// 	$this->load->view('partials/HeadAdmin');
+	// 	$this->load->view('Admin/FormFoto');
+	// }
 
-	function FormVideo(){
-		$this->load->view('partials\HeadAdmin');
-		$this->load->view('Admin\FormVideo');
-	}
+	// function FormVideo(){
+	// 	$this->load->view('partials\HeadAdmin');
+	// 	$this->load->view('Admin\FormVideo');
+	// }
 	/*function create(){
 		$this->load->view('v_createVaksin');
 	}

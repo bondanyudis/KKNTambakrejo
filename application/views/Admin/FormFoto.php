@@ -12,15 +12,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
-=======
+
                 <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
+
                 <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
             </div>
             <!-- /.navbar-header -->
             
@@ -86,8 +83,7 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                     <form role="form"  action="<?php  echo base_url('index.php/C_admin/TambahFoto')  ?>" method='post'  enctype="multipart/form-data">
                                             <div class="form-group">
                                             <label>Nama Acara</label>
@@ -96,9 +92,7 @@
                                         <div class="form-group">
                                             <label>Upload Foto</label>
                                             <input type="file" name="foto">
-=======
-=======
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
                                     <form role="form">
                                         <div class="form-group">
                                             <label>Judul Foto</label>
@@ -107,71 +101,58 @@
                                         <div class="form-group">
                                             <label>Upload Foto</label>
                                             <input type="file">
-<<<<<<< HEAD
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
                                         </div>
                                         <div class="form-group">
                                             <label>Pilih Kategori</label>
                                             <div class="radio">
                                                 <label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                                     <input type="radio" name="kategori" id="optionsRadios1" value="Pantai Sendiki" checked>Pantai Sendiki
-=======
+
                                                     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Pantai Sendiki
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
+
                                                     <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Pantai Sendiki
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-<<<<<<< HEAD
-<<<<<<< HEAD
                                                     <input type="radio" name="kategori" id="optionsRadios2" value="Pantai Tamban">Pantai Tamban
-=======
                                                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Pantai Tamban
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
+
                                                     <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Pantai Tamban
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                                     <input type="radio" name="kategori" id="optionsRadios3" value="Pantai Tamban">Acara Desa
-=======
+
                                                     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Acara Desa
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
+
                                                     <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Acara Desa
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label>Deskripsi</label>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
                                             <textarea class="form-control" rows="3" name="deskripsi"></textarea>
                                         </div> 
                                         <a href="<?php  echo base_url().'index.php/C_admin/Foto'  ?>" type="reset" class="btn btn-danger pull-right">
                                         <i class="fa fa-times"></i> Batal </a>
-=======
+
                                             <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
-=======
+
                                             <textarea class="form-control" rows="3"></textarea>
                                         </div>
                                         <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
->>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
+
                                         <button type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o"></i> Simpan</button>
                                     </form>
                                 </div>
