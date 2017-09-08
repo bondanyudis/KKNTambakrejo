@@ -48,6 +48,7 @@ class C_admin extends CI_Controller{
 		$this->load->view('partials\HeadAdmin');
 		$this->load->view('Admin\FormAcara');
 	}
+<<<<<<< HEAD
 
 	function FormFoto(){
 		$this->load->view('partials\HeadAdmin');
@@ -193,7 +194,18 @@ class C_admin extends CI_Controller{
 	function HapusVideo(){
 		redirect ("C_admin/Video");
 	}
+=======
+>>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
 
+	function FormFoto(){
+		$this->load->view('partials\HeadAdmin');
+		$this->load->view('Admin\FormFoto');
+	}
+
+	function FormVideo(){
+		$this->load->view('partials\HeadAdmin');
+		$this->load->view('Admin\FormVideo');
+	}
 	/*function create(){
 		$this->load->view('v_createVaksin');
 	}

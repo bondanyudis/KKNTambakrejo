@@ -12,7 +12,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+<<<<<<< HEAD
                 <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
+=======
+                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
+>>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
             </div>
             <!-- /.navbar-header -->
             
@@ -78,7 +82,11 @@
                         <div class="panel-body">
                             <div class="row">
                                 <div class="col-lg-12">
+<<<<<<< HEAD
                                     <form role="form"  action="<?php  echo base_url('index.php/C_admin/TambahVideo')  ?>">
+=======
+                                    <form role="form">
+>>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
                                         <div class="form-group">
                                             <label>Judul Video</label>
                                             <input class="form-control" placeholder="Masukan Nama Acara">
@@ -109,8 +117,12 @@
                                             <label>Deskripsi</label>
                                             <textarea class="form-control" rows="3"></textarea>
                                         </div>
+<<<<<<< HEAD
                                         <a href="<?php  echo base_url().'index.php/C_admin/index'  ?>" type="reset" class="btn btn-danger pull-right">
                                         <i class="fa fa-times"></i> Batal </a> 
+=======
+                                        <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
+>>>>>>> 1a0e78bc0e69ea60f15ebfc0b300d372c0d7ed92
                                         <button type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o"></i> Simpan</button>
                                     </form>
                                 </div>
