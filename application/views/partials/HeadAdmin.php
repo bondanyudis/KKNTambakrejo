@@ -7,19 +7,18 @@
     <title>Halaman Admin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="<?php echo base_url() ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>css/bootstrap.min.css" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="<?php echo base_url() ?>vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>css/metisMenu.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?php echo base_url() ?>dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>css/sb-admin-2.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="<?php echo base_url() ?>vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>css/admin.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="<?php echo base_url() ?>vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet'/>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

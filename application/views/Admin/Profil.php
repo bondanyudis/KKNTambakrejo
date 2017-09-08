@@ -33,10 +33,10 @@
 </head>
 
 <body>
-
     <div id="wrapper">
 
-<!-- Navigation -->
+        <!-- Navigation -->
+      <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -45,10 +45,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
             </div>
             <!-- /.navbar-header -->
-
             
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -65,22 +64,22 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                            <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-info fa-fw"></i> Event</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Galeri<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-image fa-fw"></i> Galeri<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/Foto') ?>">Foto</a>
+                                 <li>
+                                    <a href="<?php echo base_url('index.php/C_admin/Foto') ?>"><i class="fa fa-camera fa-fw"></i> Foto</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/video') ?>">Video</a>
+                                    <a href="<?php echo base_url('index.php/C_admin/video') ?>"><i class="fa fa-video-camera fa-fw"></i> Video</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="<?php echo base_url('index.php/C_admin/Homestay') ?>"><i class="fa fa-table fa-fw"></i> Homestay</a>
+                            <a href="<?php echo base_url('index.php/C_admin/Homestay') ?>"><i class="fa fa-home fa-fw"></i> Homestay</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('index.php/C_admin/Profil') ?>"><i class="fa fa-edit fa-fw"></i> Profil</a>

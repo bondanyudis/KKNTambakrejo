@@ -14,10 +14,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
             </div>
             <!-- /.navbar-header -->
-
             
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -34,22 +33,24 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-dashboard fa-fw"></i> Home</a>
+                            <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-info fa-fw"></i> Acara</a>
                         </li>
+
                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Galeri<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-image fa-fw"></i> Galeri<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/Foto') ?>">Foto</a>
+                                    <a href="<?php echo base_url('index.php/C_admin/Foto') ?>"><i class="fa fa-camera fa-fw"></i> Foto</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/video') ?>">Video</a>
+                                    <a href="<?php echo base_url('index.php/C_admin/video') ?>"><i class="fa fa-video-camera fa-fw"></i> Video</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
+                        
                         <li>
-                            <a href="<?php echo base_url('index.php/C_admin/Homestay') ?>"><i class="fa fa-table fa-fw"></i> Homestay</a>
+                            <a href="<?php echo base_url('index.php/C_admin/Homestay') ?>"><i class="fa fa-home fa-fw"></i> Homestay</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('index.php/C_admin/Profil') ?>"><i class="fa fa-edit fa-fw"></i> Profil</a>
@@ -65,16 +66,75 @@
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
+                    <h1 class="page-header">Acara Desa <a href="<?php echo base_url('index.php/C_Admin/FormAcara');?>" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Tambah Acara</a></h1>
+                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             
             <!-- /.row -->
             <div class="row">
-       
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Data Acara
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Nama Acara</th>
+                                        <th>Foto</th>
+                                        <th>Tanggal</th>
+                                        <th>Fungsi Admin</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php foreach ($event as $DataAcara) {?>
+                                <tr class="odd gradeX">
+                                    <td><?php echo "$DataAcara->id"; ?></td>
+                                    <td><?php echo "$DataAcara->judul"; ?></td>
+                                    <td><img class="media-object img-rounded img-responsive"  
+                                    src="<?php echo base_url().'uploads/'.$DataAcara->link; ?>"></td>
+                                    <td><?php echo "$DataAcara->tgl"; ?></td>
+                                   
+                                    <td>
+                                        <a href="<?php echo base_url().'index.php/C_admin/EditAcara/'.$DataAcara->id ?>" class="btn btn-warning">Edit</a>
+                                        <a href="<?php echo base_url().'index.php/C_admin/HapusAcara/'.$DataAcara->id ?>" type="reset" class="btn btn-danger">Hapus</a>
+                                    </td>
+                                </tr>
+                                <?php } ?>
+                                    
+                                </tbody>
+                            </table>
+                            <!-- /.table-responsive -->
+
+                            <nav aria-label="Page navigation example">
+                              <ul class="pagination justify-content-end">
+                                <li class="page-item disabled">
+                                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                  <a class="page-link" href="#">Next</a>
+                                </li>
+                              </ul>
+                            </nav>
+
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
+
         </div>
         <!-- /#page-wrapper -->
 
@@ -90,13 +150,17 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript -->
-    <script src="../vendor/raphael/raphael.min.js"></script>
-    <script src="../vendor/morrisjs/morris.min.js"></script>
-    <script src="../data/morris-data.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+            responsive: true
+        });
+    });
+    </script>
 
 </body>
 
