@@ -15,8 +15,6 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
             </div>
             <!-- /.navbar-header -->
             
