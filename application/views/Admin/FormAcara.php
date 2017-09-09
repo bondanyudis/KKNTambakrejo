@@ -88,6 +88,7 @@
                                             <label>Upload Foto</label>
                                             <input type="file" name="userfile" id="usefile">
                                         </div>
+                                        
                                         <textarea id="deskripsi" name="deskripsi" class="form-control" rows="3"></textarea>
                                         <a href="<?php  echo base_url().'index.php/C_admin/index'  ?>" type="reset" class="btn btn-danger pull-right">
                                         <i class="fa fa-times"></i> Batal </a>

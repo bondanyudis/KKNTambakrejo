@@ -12,10 +12,6 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
-
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
-
                 <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
 
             </div>
@@ -93,47 +89,26 @@
                                             <label>Upload Foto</label>
                                             <input type="file" name="foto">
 
-                                    <form role="form">
+                                    
                                         <div class="form-group">
                                             <label>Judul Foto</label>
                                             <input class="form-control" placeholder="Masukan Nama Acara">
                                         </div>
-                                        <div class="form-group">
-                                            <label>Upload Foto</label>
-                                            <input type="file">
-
-                                        </div>
-                                        <div class="form-group">
+                                       <div class="form-group">
                                             <label>Pilih Kategori</label>
                                             <div class="radio">
                                                 <label>
-
                                                     <input type="radio" name="kategori" id="optionsRadios1" value="Pantai Sendiki" checked>Pantai Sendiki
-
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Pantai Sendiki
-
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>Pantai Sendiki
-
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
                                                     <input type="radio" name="kategori" id="optionsRadios2" value="Pantai Tamban">Pantai Tamban
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Pantai Tamban
-
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">Pantai Tamban
-
                                                 </label>
                                             </div>
                                             <div class="radio">
                                                 <label>
-
                                                     <input type="radio" name="kategori" id="optionsRadios3" value="Pantai Tamban">Acara Desa
-
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Acara Desa
-
-                                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">Acara Desa
-
                                                 </label>
                                             </div>
                                         </div>
@@ -144,14 +119,6 @@
                                         </div> 
                                         <a href="<?php  echo base_url().'index.php/C_admin/Foto'  ?>" type="reset" class="btn btn-danger pull-right">
                                         <i class="fa fa-times"></i> Batal </a>
-
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
-
-                                            <textarea class="form-control" rows="3"></textarea>
-                                        </div>
-                                        <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
 
                                         <button type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o"></i> Simpan</button>
                                     </form>

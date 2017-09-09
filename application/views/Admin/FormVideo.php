@@ -14,8 +14,6 @@
                 </button>
 
                 <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
             </div>
             <!-- /.navbar-header -->
             
@@ -115,10 +113,7 @@
                                             <label>Deskripsi</label>
                                             <textarea class="form-control" rows="3"></textarea>
                                         </div>
-<<<<<<< HEAD
-                                        <i class="fa fa-times"></i> Batal </a> 
-                                        <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
-                                        <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button> 
+                                        <button type="reset" class="btn btn-danger pull-right"><i class="fa fa-times"></i> Batal</button>   
                                         <button type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o"></i> Simpan</button>
                                     </form>
                                 </div>
