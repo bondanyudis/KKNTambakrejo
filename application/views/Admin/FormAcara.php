@@ -86,9 +86,9 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Upload Foto</label>
-                                            <input type="file" name="foto">
+                                            <input type="file" name="userfile" id="usefile">
                                         </div>
-                                        <textarea class="form-control" rows="3"></textarea>
+                                        <textarea id="deskripsi" name="deskripsi" class="form-control" rows="3"></textarea>
                                         <a href="<?php  echo base_url().'index.php/C_admin/index'  ?>" type="reset" class="btn btn-danger pull-right">
                                         <i class="fa fa-times"></i> Batal </a>
                                         <button type="submit" class="btn btn-success pull-right"><i class="fa fa-floppy-o"></i> Simpan</button> 

@@ -60,47 +60,32 @@ class C_admin extends CI_Controller{
 	}
 
 	function TambahAcara(){
-		
-		$acara = $this->input->post('NamaAcara');
-		//$kategori = $this->input->post('kategori');
-		$deskripsi = $this->input->post('deskripsi');
-		$pic='sendiki.jpg';
-		$date = date("Y-m-d H:i:s");
-		$data = array(
-           'judul' => $acara,
-			'link' =>$pic,
-			'deskripsi' => $deskripsi,
-			'tgl' => $date
-         );
-		$this->m_adminEvent->input_event($data); //akses model untuk menyimpan ke database
-        redirect ("C_admin/index");
-		// $this->load->library('upload');
-  //       $config['upload_path'] = base_url().'uploads'; //path folder
-  //       $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-  //       $config['max_size'] = '2048'; //maksimum besar file 2M
-  //       $config['max_width']  = '1288'; //lebar maksimum 1288 px
-  //       $config['max_height']  = '768'; //tinggi maksimu 768 px
+		$this->load->helper(array('form', 'file', 'url'));
+        $config['upload_path'] = "./uploads/";
+        $config['allowed_types'] = 'jpg|png|gif|jpeg';
+        $config['max_size'] = '5058';
+        $this->load->library('upload', $config);
+           $this->upload->do_upload();
+            $data = array('upload_data' => $this->upload->data());
+            // var_dump($data);
+            $acara = $this->input->post('NamaAcara');
+			//$kategori = $this->input->post('kategori');
+			$deskripsi = $this->input->post('deskripsi');
+			$date = date("d-m-Y h:i:s");
 
-  //       $this->upload->initialize($config);
-
+			$dataFoto = array(
+	           'judul' => $acara,
+				'link' => $data['upload_data']['file_name'],
+				'deskripsi' => $deskripsi,
+				'tgl' => $date
+	         );
+			// var_dump($dataFoto);
+			// die();
+			$this->m_adminEvent->input_event($dataFoto); //akses model untuk menyimpan ke database
+        	redirect("C_admin/index");  
         
-    //     if($_FILES['picture']['name']){
-    //         if ($this->upload->do_upload('picture')){
-    //             $pic = $this->upload->data();
-    //             $data = array(
-    //             'judul' => $acara,
-				// 'picture' =>$pic['file_name'],
-				// 'kategori' => $kategori,
-				// 'tanggal' => $date,
-				// 'deskripsi' => $deskripsi
-    //             );
-    //             // $this->m_database->input_data($data,'products'); //akses model untuk menyimpan ke database
-    //             redirect ("C_admin/index");
-    //         }else{
-    //         	echo $config['upload_path'];
-    //             // redirect(base_url().'index.php/C_admin/index'); //jika gagal maka akan ditampilkan form upload
-    //         }
-    //     }        
+		
+		     
 	}
 
 	function TambahFoto(){

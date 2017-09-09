@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class M_AdminEvent extends CI_Model {
+class m_adminevent extends CI_Model {
 
     public function __construct() {
         parent::__construct();
@@ -12,7 +12,7 @@ class M_AdminEvent extends CI_Model {
         return $this->db->get('event')->result();
     }
        public function input_event($DataEvent) {
-        return $this->db->insert('event',$DataEvent);
+        $this->db->insert('event',$DataEvent);
     }
        public function delete_event($DataEvent) {
        	$this->db->where('id',$DataEvent);

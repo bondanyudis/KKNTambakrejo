@@ -98,10 +98,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-
+                                <?php $i=1; ?>
                                 <?php foreach ($event as $DataAcara) {?>
                                 <tr class="odd gradeX">
-                                    <td><?php echo "$DataAcara->id"; ?></td>
+                                    <td><?php echo $i; ?></td>
                                     <td><?php echo "$DataAcara->judul"; ?></td>
                                     <td><img class="media-object img-rounded img-responsive"  
                                     src="<?php echo base_url().'uploads/'.$DataAcara->link; ?>"></td>
@@ -112,19 +112,7 @@
                                         <a href="<?php echo base_url().'index.php/C_admin/HapusAcara/'.$DataAcara->id ?>" type="reset" class="btn btn-danger">Hapus</a>
                                     </td>
                                 </tr>
-                                <?php } ?>
-                                    
-
-                                    <tr class="even gradeC">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 5.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">5</td>
-                                        <td class="center">C</td>
-                                        <td><button type="button" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ubah</button>
-                                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button>
-                                        </td>
-                                    </tr>
+                                <?php $i++;} ?>
                                 </tbody>
                             </table>
                             <!-- /.table-responsive -->
