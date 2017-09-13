@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2017 at 04:28 AM
+-- Generation Time: Sep 13, 2017 at 11:02 AM
 -- Server version: 5.6.25-log
 -- PHP Version: 7.0.2
 
@@ -29,7 +29,6 @@ SET time_zone = "+00:00";
 CREATE TABLE `event` (
   `id` int(25) UNSIGNED NOT NULL,
   `judul` varchar(200) NOT NULL,
-  `gambar_id` int(25) UNSIGNED NOT NULL,
   `link` varchar(200) NOT NULL,
   `deskripsi` varchar(255) NOT NULL,
   `tgl` datetime NOT NULL
@@ -39,10 +38,12 @@ CREATE TABLE `event` (
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `judul`, `gambar_id`, `link`, `deskripsi`, `tgl`) VALUES
-(1, 'Acara Bersih Desa', 1, 'sendiki.jpg', 'Acara bersih pantai yang dilakukan di Pantai Sendiki pada hari jumat kemaren dilakukan bersamaan seluruh warga desa', '2017-09-13 07:09:00'),
-(2, 'Acara 17 Agustusan', 2, 'sendiki2.jpg', 'Acara bersih pantai yang dilakukan di Pantai Sendiki pada hari jumat kemaren dilakukan bersamaan seluruh warga desa', '2017-09-27 07:00:16'),
-(3, 'Acara Petik Laut', 2, 'sendiki2.jpg', 'Acara bersih pantai yang dilakukan di Pantai Sendiki pada hari jumat kemaren dilakukan bersamaan seluruh warga desa', '2017-09-21 08:00:00');
+INSERT INTO `event` (`id`, `judul`, `link`, `deskripsi`, `tgl`) VALUES
+(1, 'Acara Bersih Desa', 'sendiki.jpg', ' Acara bersih pantai yang dilakukan di Pantai Sendiki pada hari jumat kemaren dilakukan bersamaan seluruh warga desa', '2017-09-09 01:23:54'),
+(2, 'Acara 17 Agustusan', 'sendiki2.jpg', 'Acara bersih pantai yang dilakukan di Pantai Sendiki pada hari jumat kemaren dilakukan bersamaan seluruh warga desa', '2017-09-27 07:00:16'),
+(3, 'Acara Petik Laut', 'sendiki2.jpg', 'Acara bersih pantai yang dilakukan di Pantai Sendiki pada hari jumat kemaren dilakukan bersamaan seluruh warga desa', '2017-09-21 08:00:00'),
+(9, 'jalan ke pantai sendiki', '8_princess_mononoke1.jpg', 'jlaan-jalan yuk', '2017-09-09 02:42:15'),
+(10, 'coba pagination', '10177375_1437558363151535_7689344396591592710_n.jpg', 'hahahahhaa', '2017-09-09 03:35:26');
 
 -- --------------------------------------------------------
 
@@ -63,8 +64,7 @@ CREATE TABLE `gambar` (
 --
 
 INSERT INTO `gambar` (`id`, `judul`, `link`, `tgl`, `kategori`) VALUES
-(1, 'Jalan-jalan ke pantai 1', 'sendiki.jpg', '2017-09-05 04:24:11', 'pantai'),
-(2, 'Jalan-jalan ke pantai 2', 'sendiki2.jpg', '2017-09-05 04:24:11', 'pantai'),
+(2, 'Jalan-jalan ke pantai 2', 'sendiki.jpg', '2017-09-09 01:25:19', 'Pantai Sendiki'),
 (3, 'Jalan-jalan ke pantai 3', 'sendiki3.jpg', '2017-09-05 11:24:00', 'pantai'),
 (4, 'Jalan-jalan ke pantai 4', 'sendiki.jpg', '2017-09-21 15:04:00', 'pantai'),
 (5, 'Jalan-jalan ke pantai 5', 'sendiki.jpg', '2017-09-05 05:00:00', 'pantai'),
@@ -122,8 +122,7 @@ CREATE TABLE `video` (
 -- Indexes for table `event`
 --
 ALTER TABLE `event`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `gambar_id` (`gambar_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `gambar`
@@ -159,7 +158,7 @@ ALTER TABLE `video`
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `gambar`
 --
