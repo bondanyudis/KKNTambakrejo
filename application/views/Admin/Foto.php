@@ -6,47 +6,39 @@
 
         <!-- Navigation -->
       <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="<?php echo base_url('index.php/C_admin/index') ?>">Selamat Datang Admin!</a>
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
-                <a class="navbar-brand" href="index.html">Selamat Datang Admin!</a>
+        
+            <div class="row">
+                <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+
+                        <a class="navbar-brand" href="">Selamat Datang Admin!</a>
+
+                    </div>
+                    
+                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i> <?php print_r($this->session->userdata['username']); ?><i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="<?php echo base_url('index.php/C_login/Logout');?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                                </li>
+
+                            </ul>
+                </div>
+            <!-- /.navbar-header -->
             
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
-                            <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-info fa-fw"></i> Event</a>
+                            <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-info fa-fw"></i> Acara</a>
                         </li>
+
                         <li>
-                            <a href="#"><i class="fa fa-image fa-fw"></i> Galeri<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/Foto') ?>"><i class="fa fa-camera fa-fw"></i> Foto</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/video') ?>"><i class="fa fa-video-camera fa-fw"></i> Video</a>
-                                </li>
-                            </ul>
+                            <a href="<?php echo base_url('index.php/C_admin/Foto') ?>"><i class="fa fa-camera fa-fw"></i> Galeri Foto</a>
                             <!-- /.nav-second-level -->
                         </li>
+                        
                         <li>
                             <a href="<?php echo base_url('index.php/C_admin/Homestay') ?>"><i class="fa fa-home fa-fw"></i> Homestay</a>
                         </li>
@@ -81,12 +73,12 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Judul Foto</th>
-                                        <th>Foto</th>
-                                        <th>Tanggal</th>
-                                        <th>Kategori</th>
-                                        <th>Fungsi Admin</th>
+                                        <th id="idcol"">Id</th>
+                                        <th id="namacol">Nama Acara</th>
+                                        <th id="fotocol">Foto</th>
+                                        <th id="tglcol">Waktu/Tanggal</th>
+                                        <th id="ktgrcol">Kategori</th>
+                                        <th id="fungcol">Fungsi Admin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -99,21 +91,11 @@
                                     <td><?php echo "$DataFoto->tgl"; ?></td>
                                     <td><?php echo "$DataFoto->kategori"; ?></td>
                                     <td>
-                                        <a href="<?php echo base_url().'index.php/C_admin/EditFoto/'.$DataFoto->id ?>"  class="btn btn-warning">Edit</a>
-                                        <a href="<?php echo base_url().'index.php/C_admin/HapusFoto/'.$DataFoto->id ?>" type="reset" class="btn btn-danger">Hapus</a>
+                                        <a href="<?php echo base_url().'index.php/C_admin/EditFoto/'.$DataFoto->id ?>"  class="btn btn-warning "><i class="fa fa-pencil-square-o" ></i> Edit</a>
+                                        <a href="<?php echo base_url().'index.php/C_admin/HapusFoto/'.$DataFoto->id ?>" type="reset" class="btn btn-danger "><i class="fa fa-trash-o"></i> Hapus</a>
                                     </td>
                                 </tr>
                                 <?php } ?>
-                                    <tr class="odd gradeX">
-                                        <td>Trident</td>
-                                        <td>Internet Explorer 4.0</td>
-                                        <td>Win 95+</td>
-                                        <td class="center">4</td>
-                                        <td class="center">X</td>
-                                        <td><button type="button" class="btn btn-warning"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Ubah</button>
-                                        <button type="button" class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i> Hapus</button>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                             <!-- /.table-responsive -->

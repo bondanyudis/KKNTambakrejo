@@ -6,47 +6,30 @@
 
         <!-- Navigation -->
       <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="">Selamat Datang Admin!</a>
+        
+            <div class="row">
+                <div class="col-md-12">
+                <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
 
-            </div>
+                        <a class="navbar-brand" href="">Selamat Datang  <?php print_r($this->session->userdata['username']);?></a>
+
+                    </div>
+                    <div class="pull-rightaka" style="float: right; margin-top: 9px; margin-right: 35px;">
+                    <a class="btn btn-danger" href="<?php echo base_url('index.php/C_login/Logout');?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </div>
+                </div>
             <!-- /.navbar-header -->
             
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
                         <li>
                             <a href="<?php echo base_url('index.php/C_admin/index') ?>"><i class="fa fa-info fa-fw"></i> Acara</a>
                         </li>
 
                         <li>
-                            <a href="#"><i class="fa fa-image fa-fw"></i> Galeri<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/Foto') ?>"><i class="fa fa-camera fa-fw"></i> Foto</a>
-                                </li>
-                                <li>
-                                    <a href="<?php echo base_url('index.php/C_admin/video') ?>"><i class="fa fa-video-camera fa-fw"></i> Video</a>
-                                </li>
-                            </ul>
+                            <a href="<?php echo base_url('index.php/C_admin/Foto') ?>"><i class="fa fa-camera fa-fw"></i> Galeri Foto</a>
                             <!-- /.nav-second-level -->
                         </li>
                         
@@ -68,7 +51,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <h1 class="page-header">Acara Desa <a href="<?php echo base_url('index.php/C_Admin/FormAcara');?>" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Tambah Acara</a></h1>
-                    
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -86,15 +68,11 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
-                                        <th>Nama Acara</th>
-                                        <th>Foto</th>
-                                        <th>Tanggal</th>
-
-                                        <th>Kategori</th>
-                                        <th>Kategori</th>
-
-                                        <th>Fungsi Admin</th>
+                                        <th id="idcol"">Id</th>
+                                        <th id="namacol">Nama Acara</th>
+                                        <th id="fotocol">Foto</th>
+                                        <th id="tglcol">Waktu/Tanggal</th>
+                                        <th id="fungcol">Fungsi Admin</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -106,10 +84,9 @@
                                     <td><img class="media-object img-rounded img-responsive"  
                                     src="<?php echo base_url().'uploads/'.$DataAcara->link; ?>"></td>
                                     <td><?php echo "$DataAcara->tgl"; ?></td>
-                                   
                                     <td>
-                                        <a href="<?php echo base_url().'index.php/C_admin/EditAcara/'.$DataAcara->id ?>" class="btn btn-warning">Edit</a>
-                                        <a href="<?php echo base_url().'index.php/C_admin/HapusAcara/'.$DataAcara->id ?>" type="reset" class="btn btn-danger">Hapus</a>
+                                        <a href="<?php echo base_url().'index.php/C_admin/EditAcara/'.$DataAcara->id ?>" class="btn btn-warning "><i class="fa fa-pencil-square-o"></i> Edit</a>
+                                        <a href="<?php echo base_url().'index.php/C_admin/HapusAcara/'.$DataAcara->id ?>" type="reset" class="btn btn-danger "><i class="fa fa-trash-o"></i> Hapus</a>
                                     </td>
                                 </tr>
                                 <?php $i++;} ?>
@@ -147,26 +124,17 @@
     <!-- /#wrapper -->
 
     <!-- jQuery -->
-    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo base_url().'js/jquery.min.js'?>"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="../vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="<?php echo base_url().'js/bootstrap.min.js'?>"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="../dist/js/sb-admin-2.js"></script>
+    <script src="<?php echo base_url().'js/sb-admin-2.min.js'?>"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="<?php echo base_url().'js/metisMenu.min.js'?>"></script>
 
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-example').DataTable({
-            responsive: true
-        });
-    });
-    </script>
-
 </body>
-
 </html>

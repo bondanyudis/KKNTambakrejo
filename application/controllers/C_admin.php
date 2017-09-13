@@ -4,12 +4,14 @@
 */
 class C_admin extends CI_Controller{
 	
-		public function __construct()
-	{
+		public function __construct(){
 		parent::__construct();
 		$this->load->model("m_adminfoto");
 		$this->load->model("m_adminEvent");
+		if($this->session->userdata('status') != "login"){
+			redirect(base_url("index.php/C_Login"));
 	}
+}
 
 	function index(){
 		$data['event'] = $this->m_adminEvent->get_event();
@@ -23,12 +25,12 @@ class C_admin extends CI_Controller{
 		$this->load->view('Admin\Foto',$data);
 	}
 
-	function Video(){
+	/*function Video(){
 		//$data['products'] = $this->m_database->view_data()->result();
 		//$this->load->view('v_admin',$data);
 		$this->load->view('partials\HeadAdmin');
 		$this->load->view('Admin\Video');
-	}
+	}*/
 
 	function Homestay(){
 		//$data['products'] = $this->m_database->view_data()->result();
@@ -54,10 +56,10 @@ class C_admin extends CI_Controller{
 		$this->load->view('Admin\FormFoto');
 	}
 
-	function FormVideo(){
+	/*function FormVideo(){
 		$this->load->view('partials\HeadAdmin');
 		$this->load->view('Admin\FormVideo');
-	}
+	}*/
 
 	function TambahAcara(){
 		$this->load->helper(array('form', 'file', 'url'));
@@ -104,9 +106,9 @@ class C_admin extends CI_Controller{
 		redirect ("C_admin/Foto");
 	}
 
-	function TambahVideo(){
+/*	function TambahVideo(){
 		redirect ("C_admin/Video");
-	}
+	}*/
 
 
 	function EditAcara(){
@@ -159,9 +161,9 @@ class C_admin extends CI_Controller{
 
 		
 
-	function EditVideo(){
+	/*function EditVideo(){
 		redirect ("C_admin/Video");
-	}
+	}*/
 
 	function HapusAcara(){
 		$id=$this->uri->segment(3);
@@ -175,110 +177,34 @@ class C_admin extends CI_Controller{
 		redirect ("C_admin/Foto");
 	}
 
-	function HapusVideo(){
+	/*function HapusVideo(){
 		redirect ("C_admin/Video");
-	}
-	// function FormFoto(){
-	// 	$this->load->view('partials/HeadAdmin');
-	// 	$this->load->view('Admin/FormFoto');
-	// }
-
-	// function FormVideo(){
-	// 	$this->load->view('partials\HeadAdmin');
-	// 	$this->load->view('Admin\FormVideo');
-	// }
-	/*function create(){
-		$this->load->view('v_createVaksin');
-	}
-
-	function create_process(){
-		$productname = $this->input->post('productname');
-		$price = $this->input->post('price');
-		$stock = $this->input->post('stock') ; 
-		$description = $this->input->post('description') ;
-
-		//untuk upload gambar
-		$this->load->library('upload');
-        $config['upload_path'] = './assets/img/'; //path folder
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-        $config['max_size'] = '2048'; //maksimum besar file 2M
-        $config['max_width']  = '1288'; //lebar maksimum 1288 px
-        $config['max_height']  = '768'; //tinggi maksimu 768 px
- 
-        $this->upload->initialize($config);
-
- 		if($_FILES['picture']['name']){
-            if ($this->upload->do_upload('picture')){
-                $pic = $this->upload->data();
-                $data = array(
-                'product_name' => $productname,
-				'picture' =>$pic['file_name'],
-				'price' => $price,
-				'stock' => $stock,
-				'description' => $description
-                );
- 
-                $this->m_database->input_data($data,'products'); //akses model untuk menyimpan ke database
-                redirect(base_url().'admin');
-            }else{
-                redirect(base_url().'admin/create'); //jika gagal maka akan ditampilkan form upload
-            }
-        }
-
-	}
-
-	function delete_vaksin($id){
-		$delete = array('id' => $id);
-		$this->m_database->delete_data($delete,'products');
-		redirect(base_url().'admin');
-	}
-
-	function edit_vaksin($id){
-		$where = array('id' => $id);
-		$data['products'] = $this->m_database->edit_data($where,'products')->result();
-		$this->load->view('v_editVaksin',$data);
-	}
-
-	function update_vaksin(){
-		$id = $this->input->post('id');
-		$productname = $this->input->post('productname');
-		$price = $this->input->post('price');
-		$stock = $this->input->post('stock') ; 
-		$description = $this->input->post('description') ;
-
-		//untuk upload gambar
-		$this->load->library('upload');
-        $config['upload_path'] = './assets/img/'; //path folder
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-        $config['max_size'] = '2048'; //maksimum besar file 2M
-        $config['max_width']  = '1288'; //lebar maksimum 1288 px
-        $config['max_height']  = '768'; //tinggi maksimu 768 px
- 
-        $this->upload->initialize($config);
-
- 		if($_FILES['picture']['name']){
-            if ($this->upload->do_upload('picture')){
-                $pic = $this->upload->data();
-                	$where = array(
-					'id' => $id 
-					);
-                $data = array(
-                	'product_name' => $productname,
-					'picture' =>$pic['file_name'],
-					'price' => $price,
-					'stock' => $stock,
-					'description' => $description
-                );
- 
-                $this->m_database->update_data($where, $data,'products'); 
-                redirect(base_url().'admin'); 
-            }else{
-                redirect(base_url().'admin/create'); 
-            }
-
-		$this->m_database->update_data($where, $edit, 'products');
-		redirect(base_url().'admin');
-		}
-
 	}*/
+
+	function registration_process(){
+	$name = $this->input->post('name');
+	$username = $this->input->post('username');
+	$email = $this->input->post('email');
+	$password = $this->input->post('password');
+	$position = $this->input->post('position');
+
+	$check = $this->m_login->check_login("user",$login)->num_rows();
+
+	if ($check > 0 && $check<=1) {
+		$registration = array(
+		'name' => $name,
+		'username' => $username,
+		'email' => $email,
+		'password' => md5($password), 
+		'position' => "member"
+		);
+
+	$this->m_login->input_data($registration,'user');
+	redirect(base_url().'login');
+	}else{
+		$message = "Registrasi gagal, username anda sudah dipakai.\\nCoba Lagi.";
+			 echo "<script type='text/javascript'>alert('$message');</script>";
+		 header("Refresh: 0.01; URL=http://localhost/sipeva/index.php/login");
+	}
+  }
 }

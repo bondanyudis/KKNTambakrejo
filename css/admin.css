@@ -6,3 +6,47 @@
 .justify-content-end{
 	float: right;
 }
+
+.img-responsive{
+	padding : 0px;
+	margin:0px;
+}
+
+.table{
+	table-layout:fixed;
+	padding: 10px;
+	text-align: center;
+}
+
+#idcol{
+	width: 50px;
+	text-align: center;
+}
+
+#namacol{
+	width: 200px;
+	text-align: center;
+}
+
+#fotocol{
+	text-align: center;
+
+}
+
+#tglcol{
+	text-align: center;
+
+}
+
+#fungcol{
+	text-align: center;
+
+}
+
+#ktgrcol{
+	text-align: center;
+}
+
+.dropdown-toggle{
+	text-align: right;
+}
