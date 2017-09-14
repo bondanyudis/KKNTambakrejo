@@ -6,6 +6,7 @@ class C_admin extends CI_Controller{
 	
 		public function __construct(){
 		parent::__construct();
+		$this->load->helper(array('url'));
 		$this->load->model("m_adminfoto");
 		$this->load->model("m_adminEvent");
 		if($this->session->userdata('status') != "login"){
@@ -14,13 +15,80 @@ class C_admin extends CI_Controller{
 }
 
 	function index(){
-		$data['event'] = $this->m_adminEvent->get_event();
+		$jumlahdata = $this->m_adminEvent->jumlah_data();
+		$this->load->library('pagination');
+		$config['base_url'] = base_url().'index.php/C_admin/index/';
+		$config['per_page'] = 2;
+		$config['total_rows'] = $jumlahdata;
+		// 
+		$config['full_tag_open'] = '<nav><ul class="pagination" style="margin-top:0px">';
+		$config['full_tag_close'] = '</ul></nav>';
+		 
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li>';
+		$config['first_tag_close'] = '</li>';
+		 
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li>';
+		$config['last_tag_close'] = '</li>';
+		 
+		$config['next_link'] = 'Next';
+		$config['next_tag_open'] = '<li>';
+		$config['next_tag_close'] = '</li>';
+		 
+		$config['prev_link'] = 'Prev';
+		$config['prev_tag_open'] = '<li>';
+		$config['prev_tag_close'] = '</li>';
+		 
+		$config['cur_tag_open'] = '<li class="active"><a>';
+		$config['cur_tag_close'] = '</a></li>';
+		 
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+ 
+		// 
+		$from = $this->uri->segment(3);
+		$this->pagination->initialize($config);
+		$data['event'] = $this->m_adminEvent->get_event($config['per_page'],$from);
 		$this->load->view('partials\HeadAdmin');
 		$this->load->view('Admin\Adminindex',$data);
 	}
 
 	function Foto(){
-		$data['foto'] = $this->m_adminfoto->get_image();
+		$jumlah_data = $this->m_adminfoto->jumlahdata();
+		$this->load->library('pagination');
+		$config['base_url'] = base_url().'index.php/C_admin/Foto/';
+		$config['per_page'] = 3;
+		$config['total_rows'] = $jumlah_data;
+		// 
+		$config['full_tag_open'] = '<nav><ul class="pagination" style="margin-top:0px">';
+		$config['full_tag_close'] = '</ul></nav>';
+		 
+		$config['first_link'] = 'First';
+		$config['first_tag_open'] = '<li>';
+		$config['first_tag_close'] = '</li>';
+		 
+		$config['last_link'] = 'Last';
+		$config['last_tag_open'] = '<li>';
+		$config['last_tag_close'] = '</li>';
+		 
+		$config['next_link'] = 'Next';
+		$config['next_tag_open'] = '<li>';
+		$config['next_tag_close'] = '</li>';
+		 
+		$config['prev_link'] = 'Prev';
+		$config['prev_tag_open'] = '<li>';
+		$config['prev_tag_close'] = '</li>';
+		 
+		$config['cur_tag_open'] = '<li class="active"><a>';
+		$config['cur_tag_close'] = '</a></li>';
+		 
+		$config['num_tag_open'] = '<li>';
+		$config['num_tag_close'] = '</li>';
+		// 
+		$from = $this->uri->segment(3);
+		$this->pagination->initialize($config);
+		$data['foto'] = $this->m_adminfoto->get_image($config['per_page'],$from);
 		$this->load->view('partials\HeadAdmin');
 		$this->load->view('Admin\Foto',$data);
 	}

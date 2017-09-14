@@ -7,9 +7,11 @@ class m_adminfoto extends CI_Model {
     public function __construct() {
         parent::__construct();
     }
-
-    public function get_image() {
-        return $this->db->get('gambar')->result();
+    public function jumlahdata(){
+        return $this->db->get('gambar')->num_rows();
+    }
+    public function get_image($number,$offset) {
+        return $this->db->get('gambar',$number,$offset)->result();
     }
     public function input_foto($DataFoto) {
         return $this->db->insert('gambar',$DataFoto);

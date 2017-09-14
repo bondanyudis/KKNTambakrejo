@@ -7,18 +7,7 @@
         <!-- Navigation -->
       <!-- Navigation -->
         
-            <div class="row">
-                <div class="col-md-12">
-                <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-                    <div class="navbar-header">
-
-                        <a class="navbar-brand" href="">Selamat Datang  <?php print_r($this->session->userdata['username']);?></a>
-
-                    </div>
-                    <div class="pull-rightaka" style="float: right; margin-top: 9px; margin-right: 35px;">
-                    <a class="btn btn-danger" href="<?php echo base_url('index.php/C_login/Logout');?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                    </div>
-                </div>
+           <?php include('navigasiadmin.php'); ?>
             <!-- /.navbar-header -->
             
             <div class="navbar-default sidebar" role="navigation">
@@ -68,7 +57,7 @@
                             <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>
-                                        <th id="idcol"">Id</th>
+                                        <th id="idcol"">No</th>
                                         <th id="namacol">Nama Acara</th>
                                         <th id="fotocol">Foto</th>
                                         <th id="tglcol">Waktu/Tanggal</th>
@@ -76,10 +65,10 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php $i=1; ?>
+                                <?php $no = $this->uri->segment('3') + 1; ?>
                                 <?php foreach ($event as $DataAcara) {?>
                                 <tr class="odd gradeX">
-                                    <td><?php echo $i; ?></td>
+                                    <td><?php echo $no++; ?></td>
                                     <td><?php echo "$DataAcara->judul"; ?></td>
                                     <td><img class="media-object img-rounded img-responsive"  
                                     src="<?php echo base_url().'uploads/'.$DataAcara->link; ?>"></td>
@@ -89,22 +78,14 @@
                                         <a href="<?php echo base_url().'index.php/C_admin/HapusAcara/'.$DataAcara->id ?>" type="reset" class="btn btn-danger "><i class="fa fa-trash-o"></i> Hapus</a>
                                     </td>
                                 </tr>
-                                <?php $i++;} ?>
+                                <?php } ?>
                                 </tbody>
                             </table>
                             <!-- /.table-responsive -->
 
                             <nav aria-label="Page navigation example">
                               <ul class="pagination justify-content-end">
-                                <li class="page-item disabled">
-                                  <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                  <a class="page-link" href="#">Next</a>
-                                </li>
+                                <?php echo $this->pagination->create_links(); ?>
                               </ul>
                             </nav>
 

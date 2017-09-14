@@ -8,8 +8,11 @@ class m_adminevent extends CI_Model {
         parent::__construct();
     }
 
-    public function get_event() {
-        return $this->db->get('event')->result();
+    public function get_event($number,$offset) {
+        return $this->db->get('event',$number,$offset)->result();
+    }
+    public function jumlah_data(){
+      return $this->db->get('event')->num_rows();
     }
        public function input_event($DataEvent) {
         $this->db->insert('event',$DataEvent);
