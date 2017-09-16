@@ -79,25 +79,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label>Upload Foto</label>
-                                            <input type="file" name="foto">
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Pilih Kategori</label>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="kategori" id="optionsRadios1" value="Pantai Sendiki" checked>Pantai Sendiki
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="kategori" id="optionsRadios2" value="Pantai Tamban">Pantai Tamban
-                                                </label>
-                                            </div>
-                                            <div class="radio">
-                                                <label>
-                                                    <input type="radio" name="kategori" id="optionsRadios3" value="Pantai Tamban">Acara Desa
-                                                </label>
-                                            </div>
+                                            <input type="file" name="userfile" id="usefile">
                                         </div>
                                         <div class="form-group">
                                             <label>Deskripsi</label>

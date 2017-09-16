@@ -26,7 +26,7 @@ class m_adminevent extends CI_Model {
     }
         public function edit_event($DataEvent,$id) {
         $this->db->where('id',$id);
-        return $this->db->update('event',$DataEvent);
+        $this->db->update('event',$DataEvent);
     }
 }
 

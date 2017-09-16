@@ -6,7 +6,10 @@ class C_admin extends CI_Controller{
 	
 		public function __construct(){
 		parent::__construct();
-		$this->load->helper(array('url'));
+		$this->load->helper(array('form', 'file', 'url'));
+
+		$id=$this->uri->segment(3);
+		
 		$this->load->model("m_adminfoto");
 		$this->load->model("m_adminEvent");
 		if($this->session->userdata('status') != "login"){
@@ -130,7 +133,6 @@ class C_admin extends CI_Controller{
 	}*/
 
 	function TambahAcara(){
-		$this->load->helper(array('form', 'file', 'url'));
         $config['upload_path'] = "./uploads/";
         $config['allowed_types'] = 'jpg|png|gif|jpeg';
         $config['max_size'] = '5058';
@@ -141,7 +143,7 @@ class C_admin extends CI_Controller{
             $acara = $this->input->post('NamaAcara');
 			//$kategori = $this->input->post('kategori');
 			$deskripsi = $this->input->post('deskripsi');
-			$date = date("d-m-Y h:i:s");
+			$date = date("Y-m-d H:i:s");
 
 			$dataFoto = array(
 	           'judul' => $acara,
@@ -152,11 +154,35 @@ class C_admin extends CI_Controller{
 			// var_dump($dataFoto);
 			// die();
 			$this->m_adminEvent->input_event($dataFoto); //akses model untuk menyimpan ke database
-        	redirect("C_admin/index");  
-        
-		
-		     
+        	redirect("C_admin/index");  	     
 	}
+	//belum selesai
+	function ProsesEditAcara(){
+		$id=$this->uri->segment(3);
+        $config1['upload_path'] = "./uploads/";
+        $config1['allowed_types'] = 'jpg|png|gif|jpeg';
+        $config1['max_size'] = '5058';
+        $this->load->library('upload', $config1);
+        $this->upload->do_upload();
+        $data = array('upload_data' => $this->upload->data());
+		$acara = $this->input->post('NamaAcara');
+		//$kategori = $this->input->post('kategori');
+		$deskripsi = $this->input->post('deskripsi');
+		$date = date("Y-m-d H:i:s");
+		$data = array(
+           'judul' => $acara,
+			'link' => $data['upload_data']['file_name'],
+			'deskripsi' => $deskripsi,
+			'tgl' => $date
+         );
+		$this->m_adminEvent->edit_event($data,$id); //akses model untuk menyimpan ke database
+		// $error = array('error' => $this->m_adminEvent->display_errors());
+		// var_dump($error);
+		// die();
+        redirect ("C_admin/index");
+       
+	}
+
 
 	function TambahFoto(){
 		$acara = $this->input->post('NamaFoto');
@@ -186,23 +212,7 @@ class C_admin extends CI_Controller{
 		$this->load->view('Admin\FormEditAcara',$data);	
 	}
 
-	function ProsesEditAcara(){
-		$id=$this->uri->segment(3);
-		$acara = $this->input->post('NamaAcara');
-		//$kategori = $this->input->post('kategori');
-		$deskripsi = $this->input->post('deskripsi');
-		$pic='sendiki.jpg';
-		$date = date("Y-m-d H:i:s");
-		$data = array(
-           'judul' => $acara,
-			'link' =>$pic,
-			'deskripsi' => $deskripsi,
-			'tgl' => $date
-         );
-		$this->m_adminEvent->edit_event($data,$id); //akses model untuk menyimpan ke database
-        redirect ("C_admin/index");
-	}
-
+	
 	function EditFoto(){
 		$id=$this->uri->segment(3);
 		$data['gambar'] = $this->m_adminfoto->getdata_foto($id)->row_array();
