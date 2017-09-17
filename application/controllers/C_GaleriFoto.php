@@ -9,7 +9,7 @@ class C_GaleriFoto extends CI_Controller {
 	}
 	public function index()
 	{
-		$data = $this->m_galerigambar->tampilGambar();
+		$data = array("user" => $this->m_galerigambar->tampilGambar());
 		$this->load->view('GaleriFoto', $data);
 	}
 }

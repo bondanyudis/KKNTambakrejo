@@ -3,10 +3,10 @@ dtambakrejosumawe
 
 YANG MASIH KURANG:
 -Pagination "V"
--nampilin judul foto 
+-nampilin judul foto "V"
 -homestay belum tersedia
 -kurangi galeri video langsung youtube saja 
--link gambar ke galeri 
+-link gambar ke galeri "V"
 -video promosi 
 -kurangi potensi dan dayatarik 
--edit events, gambar
+-edit events, gambar "V"

@@ -5,7 +5,9 @@
 html, body, .container {
   height: 100%;
 }
-
+div.sendiki a:hover, div.tamban a:hover{
+  text-decoration: none!important;
+}
 /* Reset */
 html, body, h1, p, a, div{
   margin: 0;
@@ -258,9 +260,9 @@ blockquote cite {
     transition:all 1s;
 }
 
-#rig li:hover .rig-img {
+/*#rig li:hover .rig-img {
     transform:scale(1.05);
-}
+}*/
         
 /* If have the overlay layer */
 .rig-overlay {

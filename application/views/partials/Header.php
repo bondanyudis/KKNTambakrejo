@@ -28,7 +28,7 @@
       </li>
     </ul>
   </li>
-  <li><a  href="#"><i class="fa fa-bullhorn"></i>HOMESTAY</a></li>
+  <li><a  href="<?php echo base_url('index.php/C_homestay/index') ?>"><i class="fa fa-bullhorn"></i>HOMESTAY</a></li>
   <li><a  href="#"><i class="fa fa-tags"></i>EVENT</a>
   <ul class="sub-menu">
     <li><a href="#">KEGIATAN BALAI DESA</a></li>

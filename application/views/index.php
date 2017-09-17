@@ -8,28 +8,28 @@
     <?php include('partials/Header.php') ?>
     <div class="section">
       <div class="sendiki">
-        <h1 class="judul">PANTAI SENDIKI</h1>
+        <a href="<?php echo base_url('index.php/C_GaleriFoto/index') ?>"><h1 class="judul">PANTAI SENDIKI</h1></a>
         <ul id="rig">
           <?php foreach($sendiki as $gambar){ ?>
           <li>
             <a class="rig-cell" href="#">
               <img class="rig-img" src="<?php echo base_url().'uploads/'.$gambar->link; ?>">
               <span class="rig-overlay"></span>
-              <span class="rig-text">Lorem Ipsum Dolor</span>
+              <span class="rig-text"><?php echo $gambar->judul ?></span>
             </a>
           </li>
           <?php } ?>
         </ul>
       </div>
       <div class="tamban">
-        <h1 class="judul">PANTAI TAMBAN</h1>
+        <a href="<?php echo base_url('index.php/C_GaleriFoto/index') ?>"><h1 class="judul">PANTAI TAMBAN</h1></a>
         <ul id="rig">
           <?php foreach($tamban as $gambar){ ?>
           <li>
             <a class="rig-cell" href="#">
               <img class="rig-img" src="<?php echo base_url().'uploads/'.$gambar->link; ?>">
               <span class="rig-overlay"></span>
-              <span class="rig-text">Lorem Ipsum Dolor</span>
+              <span class="rig-text"><?php echo $gambar->judul ?></span>
             </a>
           </li>
           <?php } ?>

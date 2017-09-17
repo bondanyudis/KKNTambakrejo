@@ -7,24 +7,7 @@
         <!-- Navigation -->
       <!-- Navigation -->
         
-            <div class="row">
-                <div class="col-md-12">
-                <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
-                    <div class="navbar-header">
-
-                        <a class="navbar-brand" href="">Selamat Datang Admin!</a>
-
-                    </div>
-                    
-                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-user fa-fw"></i> <?php print_r($this->session->userdata['username']); ?><i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="<?php echo base_url('index.php/C_login/Logout');?>"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
-                                </li>
-
-                            </ul>
-                </div>
+            <?php include('navigasiadmin.php');?>
             <!-- /.navbar-header -->
             
             <div class="navbar-default sidebar" role="navigation">
