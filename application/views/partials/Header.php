@@ -1,5 +1,5 @@
 
-<nav class="navbar" id="top">
+<nav class="navbar" id="top" style="margin:0;padding:0">
   <div class="inner" id="inner">
     <div class="dropdownleft">
       <a  href="#"><i class="fa fa-facebook"></i></a>
@@ -12,7 +12,7 @@
       <a href="" >FAQ</a>
     </div>
   </div>
-  <div class="inner2">
+  <div class="inner2" style="width:100%;margin:0;padding:0">
     <ul class="menu">
       <li><a class="homer" href=" <?php echo base_url('index.php') ?> "><i class="fa fa-home"></i> HOME</a></li>
       <li><a  href="#"><i class="fa fa-map-marker"></i> PETA LOKASI</a></li>
@@ -56,10 +56,5 @@
   <div class="content">
     <h1>DESA WISATA TAMBAKREJO</h1>
       <p class="sub-title" style="font-size: 25px">Kecamatan Sumbermanjing Wetan, Kabupaten Malang</p>
-      <p><a class="button" id="load-more-content">Profil Singkat</a></p>
-      <!-- Some content to demonstrate viewport scrolling behavior -->
-    <div id="more-content">
-      <p><br />Profil desa Tambakrejo bla bla bla bla<br /> <a class="prof" href="http://unsplash.com/">Lihat Selengkapnya</a>.</p>
-    </div>
   </div>
 </header>

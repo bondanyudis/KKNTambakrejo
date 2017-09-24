@@ -56,7 +56,7 @@
                             <form role="form" action="<?php  echo base_url().'index.php/C_admin/TambahAcara'  ?>" method='post'  enctype="multipart/form-data"> 
                                         <div class="form-group">
                                             <label>Nama Acara</label>
-                                            <input class="form-control" placeholder="Masukan Nama Acara" name="NamaAcara">
+                                            <input class="form-control"  name="NamaAcara" maxlength="65" placeholder="panjang 65 karakter">
                                         </div>
                                         <div class="form-group">
                                             <label>Upload Foto</label>

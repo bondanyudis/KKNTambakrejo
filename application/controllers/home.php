@@ -11,7 +11,7 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$data = array("sendiki" => $this->m_galerigambar->tampilGambarSendiki(),
-			"tamban" => $this->m_galerigambar->tampilGambarTamban(),"event" => $this->m_events->tampilEvents());
+			"tamban" => $this->m_galerigambar->tampilGambarTamban(),"event" => $this->m_events->tampilEventsHome(),"event2" => $this->m_events->tampilEventsHome2());
 		$this->load->view('index',$data);
 	}
 }
