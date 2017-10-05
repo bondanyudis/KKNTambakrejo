@@ -7,13 +7,13 @@
   <body>
     <?php include('partials/Header.php') ?>
     <h1 >Peta Desa Tambakrejo</h1>
-    <div id="googleMap" style="width:100%;height:800px;" align="center"></div>
+    <div id="googleMap" style="width:100%;height:1000px;" align="center"></div>
 
 <script>
 function myMap() {
 var mapProp= {
-    center:new google.maps.LatLng(-8.4109855,112.6971755),
-    zoom:15,};
+    center:new google.maps.LatLng(-8.4109855,112.7071755),
+    zoom:16,};
 var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 </script>
