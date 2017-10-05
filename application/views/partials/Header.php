@@ -15,7 +15,7 @@
   <div class="inner2" style="width:100%;margin:0;padding:0">
     <ul class="menu">
       <li><a class="homer" href=" <?php echo base_url('index.php') ?> "><i class="fa fa-home"></i> HOME</a></li>
-      <li><a  href="#"><i class="fa fa-map-marker"></i> PETA LOKASI</a></li>
+      <li><a  href=" <?php echo base_url('index.php/Petalokasi') ?>"><i class="fa fa-map-marker"></i> PETA LOKASI</a></li>
       <li><a  href="#"><i class="fa fa-envelope"></i> PROFIL</a>
       <ul class="sub-menu">
         <li><a href="<?php echo base_url('index.php/ProfilDesa/index') ?>">DESA</a></li>
